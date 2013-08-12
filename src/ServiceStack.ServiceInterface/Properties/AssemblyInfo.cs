@@ -32,4 +32,4 @@ using System.Runtime.Serialization;
     ClrNamespace = "ServiceStack.ServiceInterface.Auth")]
 [assembly: ContractNamespace("http://schemas.servicestack.net/types",
     ClrNamespace = "ServiceStack.ServiceInterface.Admin")]
-[assembly: InternalsVisibleTo("ServiceStack.WebHost.Endpoints.Tests")]
+[assembly: InternalsVisibleTo("ServiceStack.WebHost.Endpoints.Tests, PublicKey=00240000048000009400000006020000002400005253413100040000010001003f23e2eca53e8d4587bba1c1f87883058481e167985dc886b414b17d1c1f4d1c614b2802f5a414f1e03dcbd4410c1b4b177f7691b3f570ab75e0c46e59773ef4d443c8c36d14e157c50328eba2c71df56220d34a11f83a5820fb60fbdbf71eec4fa91035bbab369517f6809d3ee9ea47dc0e5b1e1731e32e0a5d96dabadb37c8")]
