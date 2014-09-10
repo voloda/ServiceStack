@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\ss.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -78,12 +78,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ServiceStack.OrmLite">
-      <HintPath>..\..\lib\ServiceStack.OrmLite.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\lib\ServiceStack.Text.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -273,6 +267,14 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\ServiceStack.OrmLite\src\ServiceStack.OrmLite\ServiceStack.OrmLite.csproj">
+      <Project>{96179ac6-f6f1-40c3-9fdd-4f6582f54c5c}</Project>
+      <Name>ServiceStack.OrmLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ServiceStack.Text\src\ServiceStack.Text\ServiceStack.Text.csproj">
+    <Project>{579b3fdb-cdad-44e1-8417-885c38e49a0e}</Project>
+      <Name>ServiceStack.Text</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServiceStack.Common\ServiceStack.Common.csproj">
       <Project>{982416DB-C143-4028-A0C3-CF41892D18D3}</Project>
       <Name>ServiceStack.Common</Name>
