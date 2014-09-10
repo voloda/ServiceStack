@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <id>ServiceStack.Client.Silverlight</id> 
-    <version>3.9.60</version> 
+    <id>NBOSDK.ServiceStack.Client.Silverlight</id> 
+    <version>3.9.0</version> 
     <title>Silverlight Clients for ServiceStack webservices</title>
     <authors>Demis Bellot</authors> 
     <owners>Demis Bellot</owners>
@@ -18,7 +18,7 @@
     <language>en-US</language>
 	<copyright>servicestack.net 2012 and contributors</copyright>
     <dependencies>
-      <dependency id="ServiceStack.Common" />
+      <dependency id="NBOSDK.ServiceStack.Common" />
     </dependencies> 
   </metadata> 
 </package>
