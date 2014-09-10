@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <id>ServiceStack.Api.Swagger</id>
+    <id>NBOSDK.ServiceStack.Api.Swagger</id>
     <title>ServiceStack additional API for integration with Swagger</title>
-    <version>3.9.60</version>
+    <version>$version$</version>
     <authors>Demis Bellot</authors>
     <owners>Demis Bellot</owners>
     <summary>ServiceStack integration with Swagger</summary>
@@ -12,13 +12,13 @@
       Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services.
     </description>
     <projectUrl>https://github.com/ServiceStack/ServiceStack</projectUrl>
-    <licenseUrl>https://github.com/ServiceStack/ServiceStack/blob/v3/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/ServiceStack/ServiceStack/blob/master/LICENSE</licenseUrl>
     <iconUrl>http://www.servicestack.net/logo-100x100.png</iconUrl>
     <tags>Swagger API REST Docs ServiceStack</tags>
     <language>en-US</language>
     <copyright>StackExpress.net 2012 and contributors</copyright>
     <dependencies>
-      <dependency id="ServiceStack" version="[3,4)" />
+      <dependency id="NBOSDK.ServiceStack" />
     </dependencies>
   </metadata>
   <files>
