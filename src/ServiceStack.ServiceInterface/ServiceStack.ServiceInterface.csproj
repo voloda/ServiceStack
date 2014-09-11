@@ -3,6 +3,10 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\ss.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -272,7 +276,7 @@
       <Name>ServiceStack.OrmLite</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\ServiceStack.Text\src\ServiceStack.Text\ServiceStack.Text.csproj">
-    <Project>{579b3fdb-cdad-44e1-8417-885c38e49a0e}</Project>
+      <Project>{579b3fdb-cdad-44e1-8417-885c38e49a0e}</Project>
       <Name>ServiceStack.Text</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServiceStack.Common\ServiceStack.Common.csproj">

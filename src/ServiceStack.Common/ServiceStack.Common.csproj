@@ -3,6 +3,10 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\ss.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
