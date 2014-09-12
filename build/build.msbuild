@@ -15,6 +15,8 @@
     <NUnitConsoleArgs>/noshadow</NUnitConsoleArgs>
     <NuGetPath>$(BuildSolutionDir)/src/.NuGet/NuGet.exe</NuGetPath>
     <NuGetPackageDir>$(BuildSolutionDir)/NuGet/</NuGetPackageDir>
+    <NuGetPackageLibDir>$(NuGetPackageDir)/ServiceStack/lib</NuGetPackageLibDir>
+    <NuGetPackageCommonLibDir>$(NuGetPackageDir)/ServiceStack.Common/lib</NuGetPackageCommonLibDir>
     <NuGetBasePath>$(MSBuildProjectDirectory)</NuGetBasePath>
     <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</Version>
     <PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</PackageVersion>
@@ -105,7 +107,7 @@
 
     <Copy SourceFiles="%(ServiceStackFiles.Identity)" DestinationFolder="$(NuGetPackageDir)/ServiceStack/lib/net35" />
 
-    <MSBuild Projects="..\..\SignFiles.msbuild" Properties="BuildID=SS" Targets="RunSignFiles" />
+    <MSBuild Projects="..\..\SignFiles.msbuild" Properties="BuildID=SS;LibDir=$(NuGetPackageLibDir)" Targets="RunSignFiles" />
 
     <Exec Command="&quot;$(NuGetPath)&quot; pack &quot;$(NuGetPackageDir)/ServiceStack/ServiceStack.nuspec&quot; -OutputDirectory &quot;$(NuGetPackageDir)&quot; -Version $(PackageVersion)"
             LogStandardErrorAsError="true" />
@@ -118,7 +120,7 @@
 
     <Copy SourceFiles="%(ServiceStackCommonFiles.Identity)" DestinationFolder="$(NuGetPackageDir)/ServiceStack.Common/lib/net35" />
 
-    <MSBuild Projects="..\..\SignFiles.msbuild" Properties="BuildID=SScommon" Targets="RunSignFiles" />
+    <MSBuild Projects="..\..\SignFiles.msbuild" Properties="BuildID=SScommon;LibDir=$(NuGetPackageCommonLibDir)" Targets="RunSignFiles" />
 
     <Exec Command="&quot;$(NuGetPath)&quot; pack &quot;$(NuGetPackageDir)/ServiceStack.Common/ServiceStack.common.nuspec&quot; -OutputDirectory &quot;$(NuGetPackageDir)&quot; -Version $(PackageVersion)"
             LogStandardErrorAsError="true" />
