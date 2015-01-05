@@ -73,6 +73,12 @@
 
     <Delete Files="@(NugetPackageFilesToDelete)" />
 
+    <!-- ServiceStack -->
+
+    <MSBuild Projects="$(BuildSolutionDir)/src/ServiceStack.ServiceInterface/ServiceStack.ServiceInterface.csproj"
+             Targets="Build"
+             Properties="BuildPackage=true;Version=$(PackageVersion);Configuration=$(Configuration)" />
+
     <ItemGroup>
       <ServiceStackFiles Include="$(SrcDir)/ServiceStack.ServiceInterface/bin/$(Configuration)/ServiceStack.ServiceInterface.*"></ServiceStackFiles>
       <ServiceStackFiles Include="$(SrcDir)/ServiceStack.ServiceInterface/bin/$(Configuration)/ServiceStack.dll"></ServiceStackFiles>
@@ -80,9 +86,6 @@
       <ServiceStackFiles Include="$(SrcDir)/ServiceStack.ServiceInterface/bin/$(Configuration)/ServiceStack.xml"></ServiceStackFiles>
 
       <ServiceStackRazorFiles Include="$(SrcDir)/ServiceStack.Razor/bin/$(Configuration)/ServiceStack.Razor.*"></ServiceStackRazorFiles>
-
-      <ServiceStackCommonFiles Include="$(SrcDir)/ServiceStack.Common/bin/$(Configuration)/ServiceStack.Common.*"></ServiceStackCommonFiles>
-      <ServiceStackCommonFiles Include="$(SrcDir)/ServiceStack.Common/bin/$(Configuration)/ServiceStack.Interfaces.*"></ServiceStackCommonFiles>
 
       <ServiceStackMvcFiles Include="$(SrcDir)/ServiceStack.FluentValidation.Mvc3/bin/$(Configuration)/ServiceStack.FluentValidation.Mvc3.*"></ServiceStackMvcFiles>
 
@@ -98,13 +101,6 @@
       <ServiceStackSwaggerFiles Include="$(SrcDir)/ServiceStack.Api.Swagger/bin/$(Configuration)/ServiceStack.Api.Swagger.*"></ServiceStackSwaggerFiles>
     </ItemGroup>
 
-
-    <!-- ServiceStack -->
-
-    <MSBuild Projects="$(BuildSolutionDir)/src/ServiceStack.ServiceInterface/ServiceStack.ServiceInterface.csproj"
-             Targets="Build"
-             Properties="BuildPackage=true;Version=$(PackageVersion);Configuration=$(Configuration)" />
-
     <Copy SourceFiles="%(ServiceStackFiles.Identity)" DestinationFolder="$(NuGetPackageDir)/ServiceStack/lib/net35" />
 
     <MSBuild Projects="..\..\SignFiles.msbuild" Properties="BuildID=SS;LibDir=$(NuGetPackageLibDir)" Targets="RunSignFiles" />
@@ -117,6 +113,11 @@
     <MSBuild Projects="$(BuildSolutionDir)/src/ServiceStack.Common/ServiceStack.Common.csproj"
              Targets="Build"
              Properties="BuildPackage=true;Version=$(PackageVersion);Configuration=$(Configuration)" />
+
+    <ItemGroup>
+      <ServiceStackCommonFiles Include="$(SrcDir)/ServiceStack.Common/bin/$(Configuration)/ServiceStack.Common.*"></ServiceStackCommonFiles>
+      <ServiceStackCommonFiles Include="$(SrcDir)/ServiceStack.Common/bin/$(Configuration)/ServiceStack.Interfaces.*"></ServiceStackCommonFiles>
+    </ItemGroup>
 
     <Copy SourceFiles="%(ServiceStackCommonFiles.Identity)" DestinationFolder="$(NuGetPackageDir)/ServiceStack.Common/lib/net35" />
 
