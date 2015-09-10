@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
@@ -27,3 +28,4 @@ using System.Runtime.Serialization;
 	ClrNamespace = "ServiceStack.ServiceInterface.ServiceModel")]
 
 [assembly: AssemblyVersion("1.0.0.0")]
+[assembly: CLSCompliant(true)]

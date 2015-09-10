@@ -55,6 +55,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\ServiceStack.XML</DocumentationFile>
+    <NoWarn>1591,1573</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DEBUG MONO|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>

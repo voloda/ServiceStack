@@ -59,6 +59,7 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\ServiceStack.Common.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'STATIC_ONLY NO_EXPRESSIONS|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
